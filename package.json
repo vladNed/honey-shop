@@ -1,0 +1,25 @@
+{
+  "name": "honey-shop",
+  "version": "1.0.0",
+  "description": "Florella website API",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/vladNed/honey-shop.git"
+  },
+  "keywords": [
+    "API",
+    "node",
+    "shop",
+    "endpoint",
+    "javascript"
+  ],
+  "author": "Vlad Nedelcu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
