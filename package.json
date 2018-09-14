@@ -4,7 +4,8 @@
   "description": "Florella website API",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }
