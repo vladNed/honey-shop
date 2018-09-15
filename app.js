@@ -4,9 +4,13 @@ const productRoutes = require ('./routes/products');
 const morgan = require('morgan');
 const orderRoutes = require('./routes/orders');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 //Morgan is used to log every request handled by the API
 app.use(morgan('dev'));
+
+//Connect to database dev
+mongoose.connect('mongodb://devnet:'+ process.env.MONGO_ATLAS_PASSWORD +'@developmentvlad-shard-00-00-zhmc4.mongodb.net:27017,developmentvlad-shard-00-01-zhmc4.mongodb.net:27017,developmentvlad-shard-00-02-zhmc4.mongodb.net:27017/test?ssl=true&replicaSet=developmentVlad-shard-0&authSource=admin&retryWrites=true')
 
 //Parsing bodies
 app.use(bodyParser.urlencoded({
