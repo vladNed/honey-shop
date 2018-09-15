@@ -14,7 +14,35 @@ router.post('/', function(req, res) {
 });
 
 router.get('/:productid', function(req, res) {
-    res.status(201).json({
-        message: 'Handling GET/id request on products'
-    });
+   const productid = req.params.productid;
+   if (id == 'miere') {
+       res.status(200).json({
+           message: 'Miere product was called'
+       })
+   } else if (id == 'laptisor') {
+        res.status(200).json({
+            message: 'Laptisor product was called'
+        })
+   } else {
+       res.status(404).json({
+            title: 'Not Found',
+            message: 'The product with this id was not found'
+       });
+   }
 });
+
+router.patch('/:productid', function(req, res) {
+    const productid = req.params.productid;
+    res.status(200).json({
+        message: 'Updated product!'
+    })
+});
+
+router.patch('/:productid', function(req, res) {
+    const productid = req.params.productid;
+    res.status(200).json({
+        message: 'Deleted product'
+    })
+});
+
+module.exports = router;
