@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res) {
-    var product = new Product({
+    var Product = new Product({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.Name,
         price: req.body.Price,
@@ -21,7 +21,7 @@ router.post('/', function(req, res) {
     }); 
     
     //Creation and product ID should be remade
-    product
+    Product
         .save()
         .then(result => {
             res.status(201).json({
